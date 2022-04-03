@@ -1,0 +1,80 @@
+/*----------------------------
+Sintassi css:
+    selettore semplice  -> tagHtml { nomeProprieta: valore; }
+    classe              -> .nomeClasse { nomeProprieta: valore; }
+    id                  -> #nomeId { nomeProprieta: valore;}
+    selettore combinato -> selettore-principale selettore-semplice { nomeProprieta: valore; }
+Note:
+    - , -> concantenazione di selettori semplici
+    - classe più specifica di selettore semplice
+    - css sono applicati a cascata
+    - classi usate più volte nella stessa pagina html
+    - id può essere usato solo 1 volta nella stessa pagina html
+box model:
+    - ogni elemento html è un box (rettangolo)
+    - dimensione box = dimensione (width, height) contenuto + padding + bordo + margine
+    - padding: imbottitura tra contenuto e bordo
+    - larghezza elemento = contenuto + padding + bordo
+    - se fisso larghezza e aggiungo padding e bordo 
+      -> dimensione totale elemento aumento
+      -> per risolvere usare box-sizing: border-box; che applica padding e bordo all'interno dell'elemento    
+img responsive -> vedi class img-res      
+----------------------------*/
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+}
+body{ 
+    background: #ebebeb;
+    font-family: Arial;
+}
+a{
+    color: #9e0039;
+    text-decoration: none;
+}
+h1, h2, h3{
+    color: #333;
+}
+p{
+    color: #000;
+    font-size: 16px;
+}
+.container{
+    padding: 15px;
+}
+.img-res{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    background: #fff;
+    padding: 25px 15px 5px 15px;
+    width: 100%;
+}
+.logo{
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+}
+#menu-principale{
+    text-align: center;
+}
+#menu-principale li{
+    display: inline;
+}
+#menu-principale li a{
+    margin: 10px;
+}
+
+footer{
+    background: #333;
+    padding: 20px;
+}
+footer p{
+    color: #fff;
+}

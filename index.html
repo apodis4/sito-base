@@ -1,17 +1,38 @@
+<!-- 
+    tag base:
+    - html
+    - head
+    - body
+-->
 <html>
 
     <head>
+        <!-- head contiene tag funzionali -->
         <title>Home page</title>
+
+        <!-- link: include file stile nelle pagine css -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- aggiusta la visualizzazione su device piccoli -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
+        <!-- 
+            tag di contenuto: 
+            - p
+            - a -> attributo href
+            - img -> attributi src e alt
+            - ul, li
+            - h1, h2, h3, h4, h5, h6 -> h1: titolo pagina, deve essercene solo 1
+        -->
 
         <header>
+            <!-- header: parte alta del sito, contiene nome sito (logo) e menu con link ad altre pagine -->
+            
+            <a href="index.html" class="logo"> Il lato dolce </a>
 
-            <!-- header contiene nome sito e menu-->
-            <a href="index.html"> Il lato dolce </a>
-
-            <ul>
+            <ul id="menu-principale">
                 <li> <a href="index.html"> Home </a> </li>
                 <li> <a href="chi-sono.html"> Chi sono </a> </li>
                 <li> <a href="contatti.html"> Contatti </a> </li>
@@ -19,13 +40,14 @@
 
         </header><!-- header -->
 
-        <main>
+        <main class="container">
+            <!-- main: contenuto principale della pagina -->
 
-            <h1>Hone Page - Il lato dolce</h1>
+            <h1>Home Page - Il lato dolce</h1>
 
             <p>Benvenuto nel mio blog</p>
             
-            <img src="crostata-frutta.jpg" alt="Crostata di frutta">
+            <img src="crostata-frutta.jpg" alt="Crostata di frutta" class="img-res">
             
             <h2> Le mie ricette </h2>
     
@@ -44,6 +66,7 @@
         </main><!-- main -->
 
         <footer>
+            <!-- footer: parte bassa della pagina, contiene copyright, p.iva e contatti -->
 
             <p>Copyright - P.iva 00000 0000 - Tel. 345677988 - ilatodolce@gmail.com</p>
 
