@@ -18,7 +18,18 @@ box model:
     - se fisso larghezza e aggiungo padding e bordo 
       -> dimensione totale elemento aumento
       -> per risolvere usare box-sizing: border-box; che applica padding e bordo all'interno dell'elemento    
-img responsive -> vedi class img-res      
+img responsive -> vedi class img-res    
+flexbox: 
+    - proprietà per creare strutture a griglia
+media-queries 
+    - applicare css solo su alcune tipologie di device (smartphone, tablet, etc)  
+    - only smartphone: @media (max-width: 768px) {}
+    - only tablet: @media (min-width:768px) and (max-width:1023px) {}
+    - large screen: @media (min-width: 1300px){}
+posizionamenti: 
+    - position:absolute, bottom:0, right:0 -> posiziona in basso a destra rispetto a tutta la pagina
+    - se nell'elemento che contiene il content c'è position:relative -> content usa come riferimento elemento con position:relative
+    - posizionamento fisso -> 
 ----------------------------*/
 *{
     box-sizing: border-box;
@@ -44,6 +55,8 @@ p{
 }
 .container{
     padding: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .img-res{
     width: 100%;
@@ -71,10 +84,59 @@ header{
     margin: 10px;
 }
 
+.cover{
+    position: relative;
+    border-bottom: 5px solid #9e0039;
+}
+.cover__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 100px 20px 20px 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.cover__content h1, .cover__content p{
+    color: #fff;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-33 {
+    width: 33%;
+    padding: 15px;
+}
+
+@media (max-width: 768px) { 
+    .col-33 {
+        width: 100%;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    .cover img{
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
 footer{
     background: #333;
     padding: 20px;
 }
 footer p{
     color: #fff;
+}
+
+.wa-link{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
 }
